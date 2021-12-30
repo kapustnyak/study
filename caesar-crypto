@@ -1,1 +1,34 @@
+# Программа шифрования типа "Цезарь", "Крипто"
+# Program of enrypt/decrypt 'Caesar', 'Crypto'
+# Версия 1.0 - alpha без графического интерфейса
+# Version 1.0 - alpha without GUI
 
+def caesar_crypto():
+    pass
+
+print('Choose you language/Выбери свой язык(ru/en): ')
+language = input()
+types_of_encrypt = ['Цезарь', 'Caesar', 'Крипто', 'Crypto']
+phrases_dict_ru = {'Приветствие' : 'Привет! Сегодня мы будем шифровать и расшифровывать твои сообщения!',
+                   'Вопрос1' : 'Шифруем или расшифруем (ш, р)?',
+                   'Вопрос2' : 'Какой механизм шифрования ты выберешь (Цезарь, Крипто)?',
+                   'Вопрос3' : 'Шаг шифрования:',
+                   'Вопрос3.1' : 'Отрицательный или положительный (о, п)?',
+                   'Вопрос4' : 'Длина ключа шифрования:',
+                   'Вопрос5' : 'Шаг дешифрования:',
+                   'Вопрос6' : 'Ключ шифрования:'
+                   }
+phrases_dict_en = {'Greeting' : 'Hi! Today we will encrypt and decrypt you messages!',
+                   'Question1' : 'Encrypt or decrypt (e, d)?',
+                   'Question2' : 'What mechanism of encrypt you choose (Caesar, Crypto)?',
+                   'Question3' : 'Encryption step:',
+                   'Question4' : 'Lenght key encryption:',
+                   'Question5' : 'Decryption step:',
+                   'Question3.1' : 'Negative or positive (n/p)',
+                   'Question6' : 'Encryption key:'
+                   }
+if language == 'en':
+    pr
+elif language == 'ru':
+
+print()
