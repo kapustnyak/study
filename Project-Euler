@@ -21,3 +21,14 @@ for i in fib_nums:
     if i % 2 == 0:
         count += i
 print(count)
+
+# Project Euler. Problem 3.
+
+num, aux = 600851475143, 2
+while num != 1:
+    if not num % aux:
+        num /= aux
+        print(num)
+    else:
+        aux+=1
+print(aux)
