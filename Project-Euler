@@ -39,11 +39,12 @@ def isPalindrome(arg1, arg2):
     total = arg1 * arg2
     tot = str(total)
     return tot == tot[::-1]
+def palindrome(low, high):
+    palind = 0
+    for i in range(low, high):
+        for k in range(low, high):
+            if isPalindrome(i, k) and palind < i * k:
+                palind = i * k
+    return palind
 
-palindrome = 0
-
-for i in range(100, 1000):
-    for k in range(100, 1000):
-        if isPalindrome(i, k) and palindrome < i * k:
-            palindrome = i * k
-print(palindrome)
+print(palindrome(100, 1000))
