@@ -32,3 +32,18 @@ while num != 1:
     else:
         aux+=1
 print(aux)
+
+# Project Euler. Problem 4.
+
+def isPalindrome(arg1, arg2):
+    total = arg1 * arg2
+    tot = str(total)
+    return tot == tot[::-1]
+
+palindrome = 0
+
+for i in range(100, 1000):
+    for k in range(100, 1000):
+        if isPalindrome(i, k) and palindrome < i * k:
+            palindrome = i * k
+print(palindrome)
