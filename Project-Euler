@@ -60,3 +60,35 @@ for i in range(2520, 1000000000, 2520):
     if count == 20:
         print(i)
         break
+
+# Project Euler. Problem 6
+
+def squares(arg):
+    numbers = [i for i in range(1, arg + 1)]
+    sum_of_sq = 0
+    sq_of_sum = (sum(numbers)) ** 2
+    for k in numbers:
+        sum_of_sq += k ** 2
+    return sq_of_sum - sum_of_sq
+
+num = int(input())
+print(squares(num))
+
+# Project Euler. Problem 7
+
+def isPrime(num):
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+    return True
+
+first = 3
+counter = 2
+while counter <= 10001:
+    if isPrime(first):
+        counter += 1
+        first += 2
+    else:
+        first += 1
+
+print(first - 2)
