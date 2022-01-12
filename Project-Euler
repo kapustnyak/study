@@ -133,3 +133,13 @@ for a in range(1,1000):
             print(a * b * c)
             
 # Project Euler. Problem 10
+
+def isPrime(num):
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+    return True
+def spisok(num):
+    return sum([i for i in range(2, num) if isPrime(i)])
+
+print(spisok(2000000))
