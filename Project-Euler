@@ -177,18 +177,21 @@ print(maximum_product(nums_matrix))
 
 # Project Euler. Problem 12
 
-def triangle_number(arg):
-    return int((arg * (arg + 1)) / 2)
-def division(arg):
-    count = 0
-    for i in range(1, triangle_number(arg) + 1):
-        if triangle_number(arg) % i == 0:
-            count += 1
-    return count
+def div(num):
+    s = (round(num**0.5)**2 == num) + 2
+    for i in range(2, int(num ** 0.5)):
+        if not num%i:
+            s+=2
+    return s
+c = s = 1
+while div(s) <= 500:
+    c += 1
+    s += c
+print(s)
 
-counter = 1
+# Project Euler Problem 13
 
-while division(counter) != 10:
-    counter += 1
+digits = [int(input()) for _ in range(100)]
+total_sum = str(sum(digits))
+print(total_sum[:10])
 
-print(triangle_number(counter))
